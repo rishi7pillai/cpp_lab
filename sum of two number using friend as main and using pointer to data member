@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class A
+{
+    int a,b;
+public:
+    int s;
+    A(int x,int y)
+    {
+        a=x;b=y;
+    }
+    void disp()
+    {
+        cout<<"sum="<<s;
+    }
+    friend int main();
+
+};
+int m,n;
+int main()
+{
+    cout<<"Enter 1st number:";
+    cin>>n;
+    cout<<"Enter 2nd number:";
+    cin>>m;
+    A ob(m,n);
+    int A::*pa=&A::s;
+    ob.*pa=ob.a+ob.b;
+    ob.disp();
+}
