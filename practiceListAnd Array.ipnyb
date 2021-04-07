@@ -1,0 +1,124 @@
+n=int(input())
+k=int(n)
+s=0
+while k:
+    p=int(k%10);
+    s+=p*p*p
+    k=int(k/10)
+if(s==n):
+    print("Amstrong")
+else:
+    print("Not Amstrong")
+
+===========================================
+
+import math as m
+
+n=int(input())
+print(m.pi*n*n)
+
+========================================
+
+n=int(input())
+def prime(k):
+    for i in range(2,k-1):
+        if k%i==0:
+            return False
+    else:
+        return k
+print("range of prime numbers Are :")
+for i in range(2,n-1):
+    if prime(i):
+        print(prime(i),end=" ")
+
+30
+range of prime numbers Are :
+2 3 5 7 11 13 17 19 23 
+
+================================================
+
+a=0
+b=1
+n=int(input())
+print("fabonacci numbers are :")
+for i in range(n):
+    print(a,end=" ")
+    a,b=b,a+b
+
+7
+fabonacci numbers are :
+0 1 1 2 3 5 8 
+
+=================================================
+print("Nth fabo number")
+n=int(input())
+def fabo(n):
+    if n==1:
+        return 0
+    elif n==2:
+        return 1
+    else:
+        return fabo(n-1)+fabo(n-2)
+
+
+print(fabo(n),end=" ")
+
+Nth fabo number
+9
+21 
+
+============================================
+
+print("Nth fabo number")
+def fabo(n):
+    if n==1:
+        return 0
+    elif n==2:
+        return 1
+    else:
+        return fabo(n-1)+fabo(n-2)
+l1=[]
+for i in range(1,30):
+    l1.append(fabo(i))
+for i in l1:
+    print(i,end=" ")
+
+==================================
+c="A"
+print(ord(c))
+
+======================================
+l1=[]
+l1=input().strip().split()
+a,b,c=0,0,0
+for i in range(len(l1)-1):
+    if(int(l1[i])>int(l1[i+1])):
+        print(l1[i] , l1[i+1])
+        a+=1
+    if(int(l1[i])<int(l1[i+1])):
+        b+=1
+    else:
+        c+=1
+print(a, b, c , end=" ")
+if(a==0 or b==0):
+    print("Monotonic")
+else:
+    print("Not")
+
+1 2 3 4 5
+Monotonic
+
+
+==============================================
+
+l1=[]
+l1=input().strip().split()
+l1[0],l1[-1]=l1[-1],l1[0]
+print(l1)
+
+2 3 4 5
+['5', '3', '4', '2']
+
+=====================================
+
+
